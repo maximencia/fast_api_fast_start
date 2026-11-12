@@ -1,9 +1,13 @@
-# main.py
+# обновляем код в main.py
 from fastapi import FastAPI
 
-app = FastAPI()
+my_awesome_api = FastAPI()
 
 
-@app.get("/")
+@my_awesome_api.get("/")
 async def root():
     return {"message": "Hello World"}
+
+
+#Тоеговызовбудеттаким:
+#'uvicorn main:my_awesome_api --reload'
