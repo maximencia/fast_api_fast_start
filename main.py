@@ -6,7 +6,7 @@ my_awesome_api = FastAPI()
 
 @my_awesome_api.get("/")
 def root():
-    return FileResponse("/index.html")
+    return FileResponse("index.html")
 
 
 # альтернативный вариант
@@ -18,3 +18,4 @@ def root_html():
 #То его вызов будет таким:
 
 #'uvicorn main:my_awesome_api --reload'
+#uvicorn main:my_awesome_api --reload --port 8001
