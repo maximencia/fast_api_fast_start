@@ -1,12 +1,18 @@
-# обновляем код в main.py
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 
 my_awesome_api = FastAPI()
 
 
 @my_awesome_api.get("/")
-async def root():
-    return {"message": "Hello World"}
+def root():
+    return FileResponse("/index.html")
+
+
+# альтернативный вариант
+@my_awesome_api.get("/file", response_class=FileResponse)
+def root_html():
+    return "/index.html"
 
 
 #То его вызов будет таким:
