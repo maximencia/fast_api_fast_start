@@ -9,5 +9,6 @@ async def root():
     return {"message": "Hello World"}
 
 
-#Тоеговызовбудеттаким:
+#То его вызов будет таким:
+
 #'uvicorn main:my_awesome_api --reload'
